@@ -1,0 +1,804 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: linear-gradient(to right, #003d79, #009e49, #f7c300);
+    cursor: url('https://i.imgur.com/uctoYpr.png'), auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003d79;
+    color: #fff;
+    position: relative;
+}
+
+.logo img {
+    height: 120px; /* Ajustado para pantallas pequeñas */
+    width: auto;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-right nav ul li {
+    margin-left: 20px;
+}
+
+.nav-right nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Eliminar botón de tienda de la sección de inicio */
+header .nav-right nav ul li a#store {
+    display: none;
+}
+
+.cart-icon {
+    position: relative;
+    margin-left: 20px;
+}
+
+.cart-icon img {
+    height: 36px;
+    width: auto;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Ajuste para la sección de video */
+#video {
+    text-align: center; /* Centrar el contenido dentro del contenedor */
+    margin: 20px 0; /* Espaciado arriba y abajo del contenedor del video */
+}
+
+.video-wrapper {
+    max-width: 100%; /* Asegura que el video no se desborde del contenedor */
+    margin: 0 auto; /* Centra el contenedor del video horizontalmente */
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Máximo ancho del video en pantallas grandes */
+    aspect-ratio: 16 / 9; /* Mantener relación de aspecto 16:9 */
+    border: none; /* Eliminar borde del iframe */
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+}
+
+/* Ajuste responsivo para la sección de servicios */
+#services {
+    background-color: #a7242400;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.service-item {
+    background-color: #02000000;
+    border: 1px solid #c90c0c;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Asegurarse de que los elementos estén en una columna */
+    align-items: center;
+}
+
+.service-item h3 {
+    margin-top: 0;
+    text-align: center; /* Centrar el texto */
+}
+
+.service-item img {
+    width: 100px; /* Tamaño ajustado para pantallas pequeñas */
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* Botón en la sección de servicios */
+.service-item button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 200px; /* Máximo tamaño del botón */
+}
+
+.service-item button:hover {
+    background-color: darkred;
+}
+
+/* Estilos del banner de cookies */
+#cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #003d79;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    z-index: 1000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+#cookieBanner p {
+    margin: 0;
+}
+
+#cookieBanner button {
+    background-color: #f7c300;
+    color: #003d79;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .service-item {
+        padding: 15px;
+    }
+
+    .service-item h3 {
+        font-size: 18px;
+    }
+
+    .service-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-item button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* Estilos del main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f7c300;
+    color: #070707;
+}
+
+.allies-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.allies-logos img {
+    width: 80px; /* Tamaño ajustado */
+    height: 80px;
+    object-fit: contain;
+    margin: 10px;
+}
+
+/* Estilos para la sección de redes sociales */
+.social-media {
+    text-align: center;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 30px; /* Tamaño ajustado para pantallas pequeñas */
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Estilos para la sección de calificación */
+.rating {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rating h3 {
+    margin-bottom: 10px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #ffd700;
+    font-size: 24px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.star.selected {
+    color: #ffcc00;
+}
+
+.rating p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#rating-message {
+    margin-top: 10px;
+}
+
+/* Estilos específicos para la tienda */
+#store .product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#store .product-item {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #ff0c0c;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px; /* Ajustado para pantallas pequeñas */
+    text-align: center;
+}
+
+#store .product-item img {
+    width: 150px; /* Tamaño uniforme para todas las imágenes */
+    height: 150px;
+    object-fit: cover; /* Mantiene las proporciones de la imagen */
+    border-radius: 10px;
+}
+
+#store .product-item .add-to-cart,
+#store .product-item .quick-query-btn {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#store .product-item .quick-query-btn {
+    background-color: #1aca43;
+}
+
+#store .product-item .add-to-cart:hover,
+#store .product-item .quick-query-btn:hover {
+    background-color: darkred;
+}
+
+/* Estilos específicos para la sección de servicios */
+#services {
+    background-color: #a7242400;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.service-item {
+    background-color: #02000000;
+    border: 1px solid #c90c0c;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.service-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.service-item h3 {
+    margin-top: 0;
+}
+
+/* Estilos generales para botones */
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+/* Estilo específico para los botones dentro del carrito */
+.btn-eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: darkred;
+}
+
+/* Estilo del carrito */
+#cart {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#cart-summary {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000008;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f900;
+}
+
+.cart-item img {
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 60px;
+    width: auto;
+}
+
+.cart-item p {
+    margin: 0 10px;
+    flex-grow: 1;
+}
+
+.cart-item .btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cart-item .btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+/* Contador del carrito */
+#cart-count {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Estilo de notificación */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}
+
+.notification.show {
+    display: block;
+}
+
+/* Carrito en el modal */
+#modal-cart {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-cart .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+#modal-cart .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#modal-cart .close:hover,
+#modal-cart .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-cart .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#modal-cart .cart-item img {
+    width: 60px;
+    height: 60px;
+}
+
+#modal-cart .cart-item p {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+#modal-cart .cart-item .btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+#modal-cart .cart-item .btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+/* Estilos del modal de consulta */
+#queryModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#queryModal h3 {
+    margin-top: 0;
+}
+
+#queryModal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#queryModal input, #queryModal textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#queryModal button {
+    background-color: #003d79;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#queryModal button:hover {
+    background-color: #002d66;
+}
+
+/* Estilos para el formulario de consulta rápida */
+.query-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #f80808;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.query-form .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.query-form h4 {
+    margin-top: 0;
+}
+
+.query-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #df0505;
+    border-radius: 5px;
+}
+
+.query-form .submit-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.query-form .submit-btn:hover {
+    background-color: darkred;
+}
+
+/* Estilos para la sección de testimonios */
+#testimonials {
+    background-color: #f7f7f700;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial-item p {
+    margin: 0;
+}
+
+.testimonial-item .author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .product-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .offer-text h3 {
+        font-size: 20px;
+    }
+
+    .offer-text p {
+        font-size: 16px;
+    }
+
+    #testimonials .testimonial-item {
+        padding: 15px;
+    }
+
+    #testimonials .testimonial-item .author {
+        font-size: 14px;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    .service-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-right nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-right nav ul li {
+        margin: 10px 0;
+    }
+
+    .social-icon {
+        width: 30px; /* Tamaño más pequeño en móviles */
+        height: auto;
+    }
+
+    header .logo img {
+        height: 120px; /* Tamaño más pequeño en móviles */
+    }
+
+    .cart-icon img {
+        height: 30px; /* Tamaño más pequeño en móviles */
+    }
+
+    #cookieBanner {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    #quick-consult-modal .modal-content {
+        width: 90%;
+    }
+
+    #modal-cart .modal-content {
+        width: 90%;
+    }
+
+    #queryModal {
+        width: 90%;
+    }
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode #cookieBanner {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode .service-item {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+}
+
+body.dark-mode .testimonial-item {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+}
+
+body.dark-mode .btn, 
+body.dark-mode .btn-eliminar, 
+body.dark-mode .submit-btn {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode .btn-eliminar:hover, 
+body.dark-mode .submit-btn:hover {
+    background-color: #444;
+}
+
+body.dark-mode .social-icon {
+    filter: invert(1);
+}
+/* Estilos para las tarjetas de métodos de pago */
+.payment-method-card {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    border: 1px solid #fbff06; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaciado entre tarjetas */
+    background-color: rgba(249, 249, 249, 0); /* Fondo blanco transparente */
+    text-align: center; /* Centra el texto dentro de las tarjetas */
+    max-width: 100%; /* Asegura que las tarjetas no excedan el ancho de su contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Estilos para el logo del método de pago */
+.payment-logo {
+    width: 50px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para los detalles del método de pago */
+.payment-details {
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilos para el número del método de pago */
+.payment-number, .payment-description {
+    font-size: 16px; /* Tamaño del texto */
+    margin: 0;
+}
